@@ -33,8 +33,7 @@ COPY . .
 COPY --from=frontend /app/public/build ./public/build
 
 RUN composer install --no-dev --optimize-autoloader
-RUN php artisan optimize:clear
-RUN php artisan view:clear
+
 
 EXPOSE 10000
 
